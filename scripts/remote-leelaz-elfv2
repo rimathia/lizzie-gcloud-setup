@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+
+#Script for executing leelaz with elfv2 weights remotely.
+
+set -eu
+source ../config.sh
+gcloud compute ssh "$INSTANCE_NAME" --zone "$ZONE" --command "/leela/leelaz -g -w /leela/elf-network.gz -b 0 -t 16"

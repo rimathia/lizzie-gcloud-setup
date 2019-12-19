@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+
+#Script for executing katago
+
+set -eu
+source ../config.sh
+gcloud compute ssh "$INSTANCE_NAME" --zone "$ZONE" --command "cd /katago-v1.1 && ./main gtp -model g104-b20c256-s447913472-d241840887/model.txt.gz -config gtp_remote.cfg"
