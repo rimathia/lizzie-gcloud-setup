@@ -23,12 +23,11 @@ make -j4
 sudo make install
 sudo ln -s /usr/local/bin/cmake /usr/bin/
 
-# haven't managed to get CUDA backend to compile yet
 echo "Installing KataGo"
 cd /katago
 git clone https://github.com/lightvector/KataGo.git
 cd KataGo/cpp
-cmake . -DBUILD_MCTS=1 -DUSE_BACKEND=OPENCL -DCMAKE_C_COMPILER=/usr/bin/gcc-8 -DCMAKE_CXX_COMPILER=/usr/bin/g++-8
+cmake . -DBUILD_MCTS=1 -DUSE_BACKEND=CUDA -DCMAKE_C_COMPILER=/usr/bin/gcc-8 -DCMAKE_CXX_COMPILER=/usr/bin/g++-8
 cmake --build .
 cd /katago
 cp KataGo/cpp/katago .
