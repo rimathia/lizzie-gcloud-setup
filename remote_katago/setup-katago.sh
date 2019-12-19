@@ -24,4 +24,3 @@ cmake --build .
 cd /katago
 ln -s KataGo/cpp/katago .
 ./download-katago-network.sh
-
