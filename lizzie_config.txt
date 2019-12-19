@@ -14,7 +14,7 @@
     "engine-command-list": [
       "../scripts/remote-leelaz-elfv2",
       "../scripts/remote-katago",
-      "../scripts/remote-katago-v1.1",
+      "",
       "",
       "",
       "",
@@ -25,6 +25,7 @@
     "max-analyze-time-minutes": 300,
     "analyze-update-interval-centisec": 100,
     "network-file": "network.gz",
+    "_comment": "note, network-file is obselete in Lizzie 0.7+, ignore network-file, kept for compatibility",
     "max-game-thinking-time-seconds": 2,
     "engine-start-location": ".",
     "avoid-keep-variations": 30,
@@ -42,6 +43,7 @@
     "stone-indicator-type": 1,
     "win-rate-always-black": false,
     "board-width": 19,
+    "show-border": false,
     "show-move-number": false,
     "winrate-stroke-width": 3,
     "show-next-moves": true,
@@ -72,13 +74,13 @@
     "minimum-blunder-bar-width": 3,
     "large-winrate": false,
     "confirm-exit": false,
-    "show-katago-estimate-onmainboard": true,
+    "show-katago-estimate-onmainboard": false,
     "scoremean-line-color": [
       255,
       0,
       255
     ],
-    "show-katago-estimate": false,
+    "show-katago-estimate": true,
     "show-best-moves": true,
     "board-color": [
       217,
