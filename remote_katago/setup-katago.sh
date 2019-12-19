@@ -5,13 +5,13 @@ echo "This will certainly not work if the leelaz setup script didn't run yet"
 
 echo "Installing required packages"
 
-sudo apt install zlib1g-dev libzip-dev libboost-filesystem-dev
+sudo apt install -y zlib1g-dev libzip-dev libboost-filesystem-dev
 
 # https://askubuntu.com/questions/355565/how-do-i-install-the-latest-version-of-cmake-from-the-command-line
 echo "Building and installing a modern enough cmake (not tested)"
 
 sudo apt remove --purge --auto-remove cmake
-version=3.15
+version=3.16
 build=2
 mkdir ~/temp
 cd ~/temp
