@@ -6,6 +6,16 @@ set -eu
 
 source ./config.sh
 
+echo "gcloud compute instances create $INSTANCE_NAME"
+echo "       --custom-cpu $CPU_COUNT"
+echo "       --custom-memory $MEMORY"
+echo "       --zone $ZONE"
+echo "       --accelerator type=$GPU_TYPE,count=$GPU_COUNT"
+echo "       --boot-disk-size $DISK_SIZE"
+echo "       --image-family=$IMAGE_FAMILY"
+echo "       --image-project=$IMAGE_PROJECT"
+echo "       --preemptible"
+
 # Usually no need to touch this
 gcloud compute instances create "$INSTANCE_NAME" \
        --custom-cpu "$CPU_COUNT" \
