@@ -4,4 +4,5 @@
 
 set -eu
 source ../config.sh
+
 gcloud compute ssh "$INSTANCE_NAME" --zone "$ZONE" --command "cd /katago && ./katago gtp -model g104-b20c256-s447913472-d241840887/model.txt.gz -config gtp_remote.cfg"
