@@ -6,9 +6,11 @@
 # the name of the created instance
 INSTANCE_NAME=leelazero
 
-# can be either "best" or "elf" for the facebook opengo converted weights (currently stronger, slower)
-NETWORK=best
-# NETWORK=elf
+# whether to create a preemptible instance or not
+PREEMPTIBLE=
+#PREEMPTIBLE="--preemptible
+
+# no need to pick the net leela zero best and elfv2 are both created
 
 # pick a nearby zone that has the gpu you want - see https://cloud.google.com/compute/docs/gpus/
 ZONE=europe-west4-a
@@ -33,4 +35,4 @@ IMAGE_FAMILY=ubuntu-1804-lts
 IMAGE_PROJECT=ubuntu-os-cloud
 
 # Prefix for shell aliases
-ALIAS_PREFIX=v100-
+ALIAS_PREFIX=p100-
