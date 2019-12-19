@@ -12,5 +12,5 @@ gcloud compute ssh "$INSTANCE_NAME" --zone "$ZONE" --command "/leela/setup.sh"
 ./scripts/tune-instance.sh
 
 gcloud compute ssh "$INSTANCE_NAME" --zone "$ZONE" --command "sudo mkdir -p /katago && sudo chmod -R o+rw /katago"
-gcloud compute scp --zone "$ZONE" remote_katago/*.sh "$INSTANCE_NAME":/katago
+gcloud compute scp --zone "$ZONE" remote_katago/* "$INSTANCE_NAME":/katago
 gcloud compute ssh "$INSTANCE_NAME" --zone "$ZONE" --command "/katago/setup-katago.sh"
